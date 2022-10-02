@@ -1,19 +1,20 @@
 # WireGuard chain
 docker compose and configs for wireguard to make a private network over two/many nodes
 
-### Terminology
+## Terminology
 
 * Upstream Server: A server that has free access to the Internet.
 * Bridge Server: A server that is available to clients and has access to an upstream server.
 * Client: A user-side application with access to the bridge server.
 
-### Setup servers
+## Setup
+### Servers
 1. copy docker-compose and config files into your machines
 2. create two public/private keys for both of them
 3. change the bridge/config/wg0.conf by the hints on that
 4. change the upstream/config/wg0.conf like bridge
 
-### Add new peer
+### New Peer
 generate a private key
 ```bash
 wg genkey | tee clientpk
@@ -34,3 +35,7 @@ you need to set the Allowed ip according to your internal subnet mask ip
 
 and at the end you need to create config file which an example is in the bridge/clients/example.conf, you need to modify the hints based on
 peer_public_key which generated before and set the other hints
+
+
+## Clients
+[https://www.wireguard.com/install/] Wireguard clients official document
