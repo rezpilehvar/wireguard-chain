@@ -36,6 +36,9 @@ you need to set the Allowed ip according to your internal subnet mask ip
 and at the end you need to create config file which an example is in the bridge/clients/example.conf, you need to modify the hints based on
 peer_public_key which generated before and set the other hints
 
-
+## Obfuscation
+wireguard doesn't focused on obfuscation and so easy to detect and block by using deep packed inspection, you can use an obfuscate layer over it like udp2raw
+https://github.com/rezpilehvar/udp2raw
+ 
 ## Clients
 [https://www.wireguard.com/install/] Wireguard clients official document
